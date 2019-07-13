@@ -58,3 +58,13 @@ vertex(592.2, 418.0);
 vertex(720.41, 598.34);
 endShape(CLOSE);
 }
+
+int count = 1;
+void keyPressed() {
+  if(key == 'p' || key == 'P') {
+    String path  = System.getProperty("user.home") + "/Desktop/screenshot" + (int(random(65535))) + ".jpg";
+    save(path);
+    count++;
+    println("screen saved. " + path); 
+  }
+}
